@@ -1,0 +1,6 @@
+.w1 { width: 40%; }
+.w2 { width: calc(100% - 40%); }
+.rel-grid-child {
+  height: 100vh;
+  float: left;
+}
