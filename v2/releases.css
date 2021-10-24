@@ -1,6 +1,10 @@
-.w1 { width: 40%; }
-.w2 { width: calc(100% - 40%); }
-.rel-grid-child {
-  height: 100vh;
-  float: left;
+div.rel-slide {
+  margin: 0px;
+  width: 100%;
+  height: calc(100vh - 7vh);
+  position: relative;
+  background-color: green;
+}
+div.rel-slide p {
+  font-family: "Helvetica";
 }

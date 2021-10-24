@@ -1,219 +1,245 @@
-body, html {
-  margin: 0px;
+/* Variables */
+:root {
+  --HEADER_SIZE:        7vh;
+  --MENU_SIZE:          3vh;
+  --LOGOS_SIZE:         3vh;
+  --CL_WHITE:           #ffffff;
+  --CL_BLACK:           #000000;
+  --CL_ACCENT:          #c70072;
+  --FNT_MAIN:           "Helvetica";
+  --FNT_FOOTER:         "Arial";
+  --SLIDE_IMG_HEIGHT:   75vh;
+  --SLIDE_VID_HEIGHT:   75vh;
 }
+* { font-family: var(--FNT_MAIN); }
+body, html { margin: 0px; }
+
+::selection {
+  background-color: var(--CL_ACCENT);
+  color: var(--CL_WHITE);
+}
+
 a {
-  color: black;
-  border-bottom: 1px dotted #000;
+  color: var(--CL_WHITE);
+  border-bottom: 1px dotted var(--CL_BLACK);
   text-decoration: none;
+  transition: 0.3s;
 }
+a:hover { color: var(--CL_ACCENT); }
+
 div.slide {
   margin: 0px;
   width: 100%;
-  height: calc(100vh - 7vh);
+  height: calc(100vh - var(--HEADER_SIZE));
   position: relative;
-  background-color: white;
 }
-div.bnw:nth-child(odd) {
-  background-color: white;
-  color: black;
+/* Black and white stuff */
+div.bnw { /* default: odd */
+  background: var(--CL_BLACK);
+  color: var(--CL_WHITE);
 }
-div.bnw:nth-child(odd) a {
-  color: black;
-  border-bottom: 1px dotted #000;
-  transition: 0.3s;
+div.bnw a { border-bottom: 1px dotted var(--CL_WHITE); }
+div.bnw:nth-of-type(even) {
+  background: var(--CL_WHITE);
+  color: var(--CL_BLACK);
 }
-div.bnw:nth-child(odd) a:hover {
-  color: #C70072;
+div.bnw:nth-of-type(even) a {
+  color: var(--CL_BLACK);
+  border-bottom: 1px dotted var(--CL_BLACK);
 }
-div.bnw:nth-child(even) {
-  background-color: black;
-  color: white;
-}
-div.bnw:nth-child(even) a {
-  color: white;
-  border-bottom: 1px dotted #fff;
-  transition: 0.3s;
-}
-div.bnw:nth-child(even) a:hover {
-  color: #C70072;
-}
-div.slide p {
-  font-family: "Helvetica";
-}
-.small {
-  font-size: medium;
-}
+div.bnw:nth-of-type(even) a:hover { color: var(--CL_ACCENT); }
+
+.small { font-size: medium; }
+.xxl { font-size: 4em; line-height: 0.9; }
+/* Vertically centered elements */
 .vcenter, .grid-img, .grid-text {
   margin: 0;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  transform: translateY(-50%); 
 }
+/* Horizontally centered elements */
 .hcenter {
   margin: 0;
   position: absolute;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
 }
-.xxl {
-  font-size: 4rem;
-  line-height: 0.9;
-}
+/* Split slides into halves. Might rename. */
 .grid-child {
   float: left;
   width: 50%;
   height: 100%;
 }
-.s2 {
-  background-color: black;
-}
-header {
-  background-color: black;
-  color: white;
-  height: 7vh;
+/*
+  HEADER AND HEADER CONTENTS
+*/
+.header-placeholder { height: var(--HEADER_SIZE); }
+header, .mobile-footer {
+  background-color: var(--CL_BLACK);
+  color: var(--CL_WHITE);
+  height: var(--HEADER_SIZE);
   width: 100%;
 }
-header * {
-  z-index: 3;
-  position: relative;
-}
-.fit {
-  max-width: 80%;
-  max-height: 80%;
-}
-.sticky {
-  position: fixed;
-  top: 0%;
-  z-index: 2;
-}
+header * { z-index: 3; position: relative; }
+.fit { max-width: 80%; max-height: 80%; }
+.sticky { position: fixed; z-index: 2; }
+.top { top: 0%; }
 .header-child {
-  width: 33.33333%;
+  width: calc(100% / 3);
   float: left;
   height: 100%;
 }
-.header-child .links {
-  margin-left: 16px;
-  font-size: 3vh;
-}
-.link {
+/* Top banner */
+.banner {
+  width: calc(100vw - 4px);
+  background-color: var(--CL_ACCENT);
+  height: 4vh;
+  text-align: center;
   color: white;
-  font-family: Helvetica;
+  position: fixed;
+  border-radius: 2px;
+  z-index: 3;
+  top: calc(var(--HEADER_SIZE) + 12px);
+}
+/* This is where it gets a little confusing, so I've added comments. */
+.mobile-icon {
+  font-size: var(--MENU_SIZE);
+  color: var(--CL_WHITE);
+  transition: 0.3s;
+}
+.mobile-icon:hover { color: var(--CL_ACCENT); }
+.mobile-icon-container {
+  margin-left: 16px;
+  font-size: var(--MENU_SIZE);
+}
+/* Links in the mobile menu. Such as "HOME", "RELEASES", etc. */
+.link {
   font-weight: bold;
   font-size: 100%;
   border-bottom: none;
   margin-right: 10px;
   transition: 0.3s;
 }
-.header-child .logos a:hover, .link:hover {
-  color: #C70072;
+.link:hover, .logo:hover {
+  color: var(--CL_ACCENT);
   cursor: pointer;
 }
-.header-child .logos {
-  margin-right: 16px;
-  right: 0px;
-  font-size: 3vh;
+a:hover { letter-spacing: 0.1em; }
+/* Container for the links */
+.mobile-links {
+  display: none;
+  background-color: var(--CL_BLACK);
+  width: 10%;
+  z-index: 3;
+  position: fixed;
+  top: calc(var(--HEADER_SIZE) + 4px);
+  left: 4px;
+  padding: 8px;
+  border-radius: 6px;
 }
-.header-child .logos a {
-  color: white;
+.logos {
+  right: 16px;
+  font-size: var(--LOGOS_SIZE);
+}
+.mobile-logos {
+  font-size: var(--LOGOS_SIZE);
+}
+.header-child .logos a, .logo {
+  color: var(--CL_WHITE);
   border-bottom: none;
-  margin-left: 10px;
   transition: 0.3s;
 }
+/* Slide elements */
 .grid-img {
-  width: 75vh;
+  width: min(var(--SLIDE_IMG_HEIGHT), 45vw);
   height: auto;
   float: right;
   right: calc(50% + 10px);
   border-radius: 8px;
 }
 .grid-video {
-  width: 75vh;
-  height: 75vh;
+  width: min(var(--SLIDE_VID_HEIGHT), 45vw);
+  height: min(var(--SLIDE_VID_HEIGHT), 45vw);
 }
 .grid-text {
   font-size: x-large;
   left: calc(50% + 10px);
 }
-.sticky + .content {
-  padding-top: 7vh;
-}
+/* Footer */
 .footer {
   padding: 12px;
   margin: 0px;
-  font-family: Arial;
+  font-family: var(--FNT_FOOTER);
 }
 .footer p {
   margin: 0px 0px 0px 0px;
 }
-.mobile-links {
-  display: none;
-  background-color: black;
-  color: white;
-  width: 10%;
-  z-index: 2;
-  position: fixed;
-  top: calc(7vh + 4px);
-  left: 4px;
-  padding: 8px;
-  border-radius: 6px;
+.cc { width: 1em; height: auto; }
+/* Animation */
+.fadein { animation: 0.3s fadein; }
+@keyframes fadein {
+  from { opacity: 0%; }
+  to { opacity: 100%; }
 }
-.fadein {
-  animation: 0.3s mobile-menu-fade-in;
+.fadeout { animation: 0.3s fadeout; }
+@keyframes fadeout {
+  from { opacity: 100%; }
+  to { opacity: 0%; }
 }
-.fadeout {
-  animation: 0.3s mobile-menu-fade-out;
+.slidedown { animation: 0.3s slidedown; }
+@keyframes slidedown {
+  from { transform: translateY(-20vh); }
+  to { transform: none; }
 }
-@keyframes mobile-menu-fade-in {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 100%;
-  }
+.slideup { animation: 0.3s slideup; }
+@keyframes slideup {
+  from { transform: none; }
+  to { transform: translateY(-20vh); }
 }
-@keyframes mobile-menu-fade-out {
-  from {
-    opacity: 100%;
-  }
-  to {
-    opacity: 0%;
-  }
-}
-.mobile-menu {
-  color: white;
-  transition: 0.3s;
-}
-.mobile-menu:hover {
-  color: #C70072;
-}
+.mlin { animation: fadein 0.3s, slidedown 0.3s ease; }
+.mlout { animation: fadeout 0.3s, slideup 0.3s ease; }
+/*
+  BREAKPOINTS
+*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .pc-links { display: none; }
-  .mobile-menu { display: block; }
+  .header-child { width: 100%; }
+  .h2, .h3 { display: none; }
+  .mobile-footer { display: block; }
+  .mobile-logo { display: block; }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .pc-links { display: none; }
-  .mobile-menu { display: block; }
+  .header-child { width: 100%; }
+  .h2, .h3 { display: none; }
+  .mobile-footer { display: block; }
+  .mobile-logo { display: block; }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .pc-links { display: none; }
-  .mobile-menu { display: block; }
+  .header-child { width: 100%; }
+  .h2, .h3 { display: none; }
+  .mobile-footer { display: block; }
+  .mobile-logo { display: block; }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .pc-links { display: none; }
-  .mobile-menu { display: block; }
+  .header-child { width: calc(100% / 3); }
+  .h2, .h3 { display: block; }
+  .mobile-footer { display: none; }
+  .mobile-logo { display: none; }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1300px) {
-  .pc-links { display: none; }
-  .mobile-menu { display: block; }
+  .header-child { width: calc(100% / 3); }
+  .h2, .h3 { display: block; }
+  .mobile-footer { display: none; }
+  .mobile-logo { display: none; }
 }
