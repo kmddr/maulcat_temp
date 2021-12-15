@@ -103,6 +103,7 @@ header * { z-index: 3; position: relative; }
   border-radius: 2px;
   z-index: 3;
   top: calc(var(--HEADER_SIZE) + 12px);
+  display: none;
 }
 /* This is where it gets a little confusing, so I've added comments. */
 .mobile-icon {
@@ -133,7 +134,7 @@ a:hover { letter-spacing: 0.1em; }
   display: none;
   background-color: var(--CL_BLACK);
   width: 10%;
-  z-index: 3;
+  z-index: 1;
   position: fixed;
   top: calc(var(--HEADER_SIZE) + 4px);
   left: 4px;
