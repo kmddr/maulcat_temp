@@ -13,7 +13,7 @@
     <script>
       let pagemode = "light";
       // Check cookies for Dark mode. If dark = true, then set it
-      if (document.cookie == "dark=true") {
+      if (document.cookie.includes("dark=true")) {
         document.querySelector(':root').style.setProperty('--CL_WHITE', '#000');
         document.querySelector(':root').style.setProperty('--CL_BLACK', '#fff');
         document.querySelector(':root').style.setProperty('--BG_OPACITY', 1);
