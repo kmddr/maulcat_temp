@@ -29,13 +29,13 @@ function TogglePageMode() {
     document.querySelector(':root').style.setProperty('--CL_WHITE', '#000');
     document.querySelector(':root').style.setProperty('--CL_BLACK', '#fff');
     document.querySelector(':root').style.setProperty('--BG_OPACITY', 1);
-    document.cookie = "dark=true; SameSite=None; Secure";
+    document.cookie = "dark=true; path=/";
     document.getElementById("toggle").innerHTML = "☀️";
   } else {
     document.querySelector(':root').style.setProperty('--CL_WHITE', '#fff');
     document.querySelector(':root').style.setProperty('--CL_BLACK', '#000');
     document.querySelector(':root').style.setProperty('--BG_OPACITY', 0.2);
-    document.cookie = "dark=false; SameSite=None; Secure";
+    document.cookie = "dark=false; path=/";
     document.getElementById("toggle").innerHTML = "🌙";
   }
   pagemode = pagemode == "light" ? "dark" : "light";
