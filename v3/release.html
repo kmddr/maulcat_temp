@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="hamburgers.css">
     <link rel="stylesheet" href="../fonts/stylesheet.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="release.css">
   </head>
   <body>
     <script>
@@ -51,14 +52,38 @@
     </div>
     <button id="toggle" onclick="TogglePageMode();">🌙</button>
     <div class="lower">
-      <img id="acover" src="../images/NEW_COVERS/none.jpg" />
-      <h1 id="atitle">Album Title</h1>
-      <h3 id="atype">Album Type</small>
-      <h3 id="aartist">Album Artist</h3>
-      <h3 id="acat">Catalog Number</h3>
-      <h3 id="areldate">Release Date</h3>
-      <h3 id="agenres">Genres</h3>
-      <h3 id="aformats">Formats</h3>
+      <div class="sec1">
+        <img id="acover" src="../images/NEW_COVERS/none.jpg" />
+      </div>
+      <div class="sec2">
+        <h1 class="head">
+          <span id="atitle">Album Title</span> <span id="atype">Album Type</span>
+        </h1>
+        <h2 class="subhead">
+          <span id="aartist">Album Artist</span> &bull; <span id="acat"></span>
+        </h2>
+        <h3 class="list">
+          <span id="agenres">
+            <span id="gfheader">GENRE:</span> 
+          </span>
+          <br>
+          <span id="aformats">
+            <span id="gfheader">BUY NOW:</span> 
+          </span>
+          <br>
+        </h3>
+        <span>
+          Released <span id="areldate">Release Date</span>.<br>
+          &copy; <span id="aartist2"></span> & MAULCAT RECORDS
+        </span>
+      </div>
+      <table class="table">
+        <tr>
+          <th>#</th>
+          <th>track name</th>
+          <th>runtime</th>
+        </tr>
+      </table>
     </div>
     <script src="script.js"></script>
     <script type="text/javascript" src="data.js"></script>

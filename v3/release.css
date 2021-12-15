@@ -1,0 +1,42 @@
+#acover {
+  height: 300px;
+}
+.lower {
+  margin-top: 20px;
+  text-align: left;
+  font-family: "Helvetica";
+}
+.sec1 {
+  width: 300px;
+  float: left;
+}
+.sec2 {
+  padding-left: 310px;
+}
+#atype { font-size: 18px; font-style: italic; }
+.head {
+  font-family: "Shapiro Wide";
+  font-weight: 100;
+  font-size: 50px;
+  margin-bottom: -18px;
+}
+#aartist {
+  font-family: "Shapiro Wide";
+  font-weight: 100;
+}
+.subhead {
+  margin-bottom: -7px;
+}
+.list {
+  margin-bottom: 17px;
+}
+#gfheader {
+  font-family: "Shapiro Wide";
+  font-weight: 100;
+}
+.table {
+  width: 100%;
+}
+th, td {
+  border: 1px solid var(--CL_BLACK);
+}
