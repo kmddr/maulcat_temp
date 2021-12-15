@@ -137,7 +137,8 @@ data = [
       ["Throwing Stones", 249],
       ["Tilted Sideways", 201],
       ["Speakr", 144]
-    ]
+    ],
+    "description": "This album is the worst. Utter garbage. An album you throw away and never listen to again. This album is worse sounding than nails on a chalkboard. This album is trash.<br><br>\"_trash\", fourth studio album by <a href=\"artist?n=rybbon\">rybbon</a>, is composed of rybbon's signature experimental tracks, inspired by IDM and UK Garage artists such as Aphex Twin, Jamie xx, and a plethora of other artists respected by rybbon."
   },
   {
     "title": "Virtual Pleasure",
@@ -156,7 +157,8 @@ data = [
       ["会うことはありません", 209],
       ["信頼なし", 373],
       ["ドーパミンラッシュオンライン", 384, true]
-    ]
+    ],
+    "description": ""
   },
   {
     "title": "MD (Manifest Destiny)",
