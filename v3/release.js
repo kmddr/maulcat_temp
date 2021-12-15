@@ -8,7 +8,7 @@ function getParameterByName(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 const cat = getParameterByName("cat");
-const album = JSON.parse(data)[cat];
+const album = data[cat];
 console.log(album);
 // place values in html
 // album title, artist and type
@@ -76,3 +76,4 @@ td = document.createElement("TH");
 td.innerHTML = `${~~((totalTime % 3600) / 60)}:${(~~totalTime % 60 < 10 ? "0" : "")}${~~totalTime % 60}`;
 tr.appendChild(td);
 tparent.appendChild(tr);
+document.getElementById("description").innerHTML = album.description || "";
