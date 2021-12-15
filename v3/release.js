@@ -46,6 +46,7 @@ document.getElementById("acover").src = `../images/NEW_COVERS/${album.cat}.jpg`;
 // tracklist time.
 let tparent = document.getElementsByClassName("table")[0];
 let tr, td;
+let totalTime = 0;
 for (let k = 0; k < album.tracks.length; k++) {
   tr = document.createElement("TR");
   // track #
@@ -59,7 +60,19 @@ for (let k = 0; k < album.tracks.length; k++) {
   // track length
   td = document.createElement("TD");
   time = album.tracks[k][1];
+  totalTime += time;
   td.innerHTML = `${~~((time % 3600) / 60)}:${(~~time % 60 < 10 ? "0" : "")}${~~time % 60}`;
   tr.appendChild(td);
   tparent.appendChild(tr);
 }
+tr = document.createElement("TR");
+td = document.createElement("TD");
+td.innerHTML = "#";
+tr.appendChild(td);
+td = document.createElement("TH");
+td.innerHTML = "total";
+tr.appendChild(td);
+td = document.createElement("TH");
+td.innerHTML = `${~~((totalTime % 3600) / 60)}:${(~~totalTime % 60 < 10 ? "0" : "")}${~~totalTime % 60}`;
+tr.appendChild(td);
+tparent.appendChild(tr);
