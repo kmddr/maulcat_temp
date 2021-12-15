@@ -19,12 +19,6 @@ function OpenMobileMenu() {
     y.classList.add("is-active");
   }
 }
-window.onresize = function () {
-  var x = document.getElementsByClassName("mobile-links")[0];
-  if (vw > 1147 && x.style.display === "block") {
-    x.style.display = "none";
-  }
-}
 function TogglePageMode() {
   console.log("Changing page mode.");
   document.body.style.transition = '0.7s';
