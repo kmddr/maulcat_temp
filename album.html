@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maulcat | Home</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background: black;
+        color: white;
+        width: 875px;
+        margin: 0 auto;
+        font-family: Helvetica, Arial, sans-serif;
+        
+        letter-spacing: -0.3px;
+      }
+      .grid-unit {
+        width: 280px;
+        height: 350px;
+      }
+      .grid-unit img {
+        max-width: 100%;
+      }
+      .grid-unit p {
+        margin: 0;
+        float: left;
+      }
+      p:nth-child(4) {
+        float: right;
+        text-align: right;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, min-content);
+        justify-content: space-between;
+        align-content: space-evenly;
+        align-items: center;
+      }
+      .condensed {
+        letter-spacing: -1px;
+      }
+      .doublecondensed {
+        letter-spacing: -1.9px;
+      }
+      .head {
+        margin: 32px 0;
+      }
+      .upper {
+        position: relative;
+        margin: 16px 0;
+      }
+      .upper img {
+        height: 100px;
+        margin-right: 16px;
+      }
+      .upper .type {
+        position: absolute;
+        height: 80px;
+        bottom: 0px;
+      }
+      .links {
+        grid-template-columns: repeat(5, min-content);
+      }
+      .links a {
+        color: gray;
+        text-decoration: none;
+        margin-bottom: 8px;
+      }
+      .links a:hover {
+        font-weight: bold;
+        color: white !important;
+      }
+      .active {
+        color: white !important;
+      }
+      .goto {
+        width: 280px;
+        height: 280px;
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        opacity: 0;
+        color: white;
+        transition: 0.3s;
+      }
+      .goto:hover {
+        opacity: 1;
+      }
+      .inner {
+        width: 280px;
+        height: 280px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .inner img {
+        width: 80px;
+        height: min-content;
+      }
+      .inner span {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+      }
+      .cover {
+        width: 40%;
+        float: left;
+        padding-right: 16px;
+      }
+      #text {
+        width: calc(60% - 16px);
+        float: left;
+      }
+      .header {
+        word-wrap: break-word;
+        padding-top: 0px;
+        margin: 8px 0px;
+        font-weight: 400;
+      }
+      .subtitle {
+        margin-top: 0px;
+        color: #aaa;
+      }
+      .arrows {
+        margin: 0px;
+        margin-top: -8px;
+      }
+      .left {
+        float: left;
+        width: 50%;
+      }
+      .right {
+        text-align: right;
+        float: right;
+        width: 50%;
+      }
+      .prev, .next {
+        color: white;
+      }
+      .prev:hover, .next:hover {
+        font-style: italic;
+      }
+      .tracklist {
+        width: 100%;
+      }
+      td {
+        padding: 3px;
+      }
+      tr:nth-child(even) {
+        background-color: #333;
+      }
+      th {
+        text-align: left;
+      }
+      .merch-grid {
+        width: 100%;
+        float: left;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 2px));
+        justify-content: space-between;
+        align-content: space-evenly;
+        align-items: center;
+      }
+      #cover {
+        width: 100%;
+        padding-bottom: 16px;
+      }
+      .merch-grid * {
+        width: 100%;
+        height: 129.75px;
+        object-fit: cover;
+      }
+      .merch h2 {
+        margin: 0;
+        margin-bottom: 8px;
+      }
+      .merch h2:nth-child(1) {
+        float: left;
+        width: 50%;
+      }
+      .merch h2:nth-child(2) {
+        float: right;
+        text-align: right;
+        width: 50%;
+      }
+      .merch p {
+        margin-top: 0;
+        color: darkgray;
+      }
+      #buylink {
+        text-decoration: underline;
+        font-weight: 500;
+      }
+      #buylink:hover {
+        font-weight: bold;
+      }
+      td:nth-child(3) {
+        text-align: right;
+      }
+      .credits {
+        width: 100%;
+        grid-template-columns: repeat(2, auto);
+        margin-top: 16px;
+        display: grid;
+      }
+      .credits p {
+        float: left;
+      }
+      .credits p:nth-child(even) {
+        text-align: right;
+      }
+      a {
+        color: white;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.9);
+        justify-content: center;
+        align-items: center;
+      }
+      .modal-content {
+        margin: 0 auto;
+        width: 500px;
+      }
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .close:hover, .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .red { color: red; }
+    </style>
+    <div class="head">
+      <div class="upper">
+        <img src="logo.png" alt="Maulcat logo">
+        <img class="type" src="type.png" alt="Maulcat Records">
+      </div>
+      <div class="lower">
+        <div class="grid links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="artists.html">Artists</a>
+          <a href="feed.html">Feed</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <hr>
+      </div>
+      <div class="arrows">
+        <p class="left">🠀 <a class="prev" href=""></a></p>
+        <p class="right"><a class="next" href=""></a> 🠂</p>
+      </div>
+      <div class="cover">
+        <img src="" alt="" id="cover">
+        <div class="merch">
+          <h2 class="merch-header"></h2>
+          <h2><a id="buylink"></a></h2>
+          <p class="merchdesc"></p>
+          <div class="merch-grid">
+            <img class="merchimg modaltrigger" src="" alt="">
+            <img class="merchimg modaltrigger" src="" alt="">
+          </div>
+        </div>
+        <br>
+        <div class="credits"></div>
+      </div>
+      <div id="text">
+        <h1 class="header">
+          <span class="artist"></span><br>
+          <strong><span class="aname"></span></strong>
+        </h1>
+        <p class="subtitle">
+          <span class="reltype"></span> •
+          <span class="year"></span><br>
+          <span class="genres"></span> • <span class="formats"></span><br>
+          MC<span class="cat"></span>
+        </p>
+        <strong>Tracklist</strong>
+        <table class="tracklist">
+        </table>
+        <p class="description">
+        </p>
+      </div>
+      <div class="modal">
+        <span class="close">&times;</span>
+        <img src="" alt="" class="modal-content">
+      </div>
+      <script src="album.js"></script>
+    </div>
+  </body>
+</html>
