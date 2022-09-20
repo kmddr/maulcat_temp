@@ -76,7 +76,24 @@ const albums = [
   ]],
 
   ["Twilight Windows", "Remnants", 0, 2022, [
-
+    ["1","eyes shut","3:21"],
+    ["2","mournful","11:03"],
+    ["3","down deep","5:12"],
+    ["4","wretched","4:06"],
+    ["5","saturnine","9:42"],
+    ["6","stockholm","4:10"],
+    ["7","godforsaken","10:43"],
+  ], "Dark Ambient, Deathdream", "Digital, Cassette", true, {
+    type: "cass",
+    price: "9.50",
+    desc: `Includes a white cassette copy of "remnants" including high-quality adhesive labels, and a professionally printed J-card. Housed in a "frosted ice" Norelco case.`,
+    img: ["12_1.jpg", "12_2.jpg"],
+    link: "https://twilightwindows.bandcamp.com/album/remnants-2"
+  }, [
+    ["Production","Twilight Windows"],
+    ["Mixing/Mastering","Twilight Windows"],
+    ["A&R","Syd"],
+    ["Art","Twilight Windows<br>Syd"]
   ]],
 
   ["Love Crush Number One", "Requiem for an Automaton", 0, 2022, [
@@ -95,7 +112,7 @@ const albums = [
     price: "9.50",
     desc: `Includes a black cassette copy of "Requiem for an Automaton" including high-quality adhesive labels, and a professionally printed J-card. Housed in a purple tint Norelco case.`,
     img: ["13_1.jpg"],
-    link: "lovecrushnumberone.bandcamp.com/album/requiem-for-an-automaton-2"
+    link: "https://lovecrushnumberone.bandcamp.com/album/requiem-for-an-automaton-2"
   }, [
     ["Production","Love Crush Number One"],
     ["Mixing/Mastering", "Love Crush Number One"],
@@ -277,7 +294,7 @@ I felt inspired by concerts and how conquerable everything feels when I leave on
     ["1.15","<strong>Micheal S.</strong> - Sings the Hits pt. II","07:09"],
     ["1.16","<strong>zweihandr</strong> - Digital Comfort","04:25"],
     ["","<strong>Disc 2</strong>",""],
-    ["2.1","<strong>DOBBIE</strong> - spirit halloween twerkoff","02:29"],
+    ["2.1","<strong>DOBBIE</strong> - spirit halloween twerkathon","02:29"],
     ["2.2","<strong>spearflower</strong> - incisors dominate","02:38"],
     ["2.3","<strong>CORPSEWAX</strong> - SWEEPSTAKES","00:48"],
     ["2.4","<strong>DJ ARCHFIEND</strong> - depth amulet","03:14"],
