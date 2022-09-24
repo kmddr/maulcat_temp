@@ -22,7 +22,8 @@ const albums = [
   ["Vertigoaway", "Jungle Witch / Agaki Home Radio", 3, 2022],
   ["Vale-Smith", "Rekindle", 0, 2022],
   ["Monte Hills", "Gotta Get", 2, 2022, "S 005"],
-  ["Various Artists", "Maulcat Vol. 1", 3, 2022]
+  ["Various Artists", "Maulcat Vol. 1", 3, 2022],
+  ["Purity Filter", "Immortal Spirit", 0, 2022],
 ];
 
 /* <div class="grid-unit">

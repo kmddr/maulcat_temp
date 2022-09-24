@@ -324,6 +324,43 @@ I felt inspired by concerts and how conquerable everything feels when I leave on
     ["Curator","Syd"],
     ["Rendering","Calcium Demo"]
   ]],
+
+  ["Purity Filter", "Immortal Spirit", 0, 2022, [
+    ["","<strong>Side A</strong>",""],
+    ["A1","Lost Silver","01:34"],
+    ["A2","Abraxas <small>ft. Catastrophi</small>","02:42"],
+    ["A3","Keratin <small>ft. N3RVOUS</small>","01:47"],
+    ["A4","Tenshi","02:01"],
+    ["A5","Lycanphilia <small>ft. Sigmatus</small>","03:32"],
+    ["A6","Bloodletting <small>ft. Vertigoaway</small>","02:39"],
+    ["A7","Spiraling <small>ft. 5ubaruu, Catastrophi, Sigmatus</small>","03:28"],
+    ["A8","Dodona <small>ft. azul</small>","03:08"],
+    ["A9","Shiki","03:09"],
+    ["","<strong>Side B</strong>",""],
+    ["B1","Shiki","03:09"],
+    ["B2","Vanish","02:00"],
+    ["B3","Velvet","03:12"],
+    ["B4","Sinbound","02:37"],
+    ["B5","Idratherbeinitagain <small>feat. MANAPOOL</small>","03:51"],
+    ["B6","Collapse <small>feat. rainsdeaf</small>","03:01"],
+    ["B7","Elixir Drowned","01:58"],
+    ["B8","Serris <small>(bonus)</small>","01:15"],
+  ], "Hardcore", "Vinyl", true, {
+    type: "vinyl",
+    price: "28.00",
+    desc: `"Immortal Spirit"; the 2022 album from Landline Collective's own Purity Filter on standard weight 12" vinyl; housed in a premium gatefold jacket. (not pictured)
+    * Includes bonus track "Serris"
+    (c) 2022 MC020 DY032 Maulcat / <a href="https://dismiss.store">Dismiss Yourself</a>`,
+    img: ["20_1.png","20_2.png"],
+    link: "https://music.maulcat.us/album/immortal-spirit",
+  }, [
+    ["Production","Purity Filter"],
+    ["Mastering","Sienna Sleep"],
+    ["Cover Art","Mess Sama"],
+    ["A&R","Syd"],
+    ["GFX & Color","LCL Stream"],
+    ["Layout","Syd"]
+  ]]
 ];
 
 const headers = {
