@@ -1,0 +1,10 @@
+div.rel-slide {
+  margin: 0px;
+  width: 100%;
+  height: calc(100vh - 7vh);
+  position: relative;
+  background-color: green;
+}
+div.rel-slide p {
+  font-family: "Helvetica";
+}

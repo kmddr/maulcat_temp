@@ -469,8 +469,8 @@ if (hasmerch) {
   document.querySelector('.merchdesc').innerHTML = merchdata.desc;
 
   let images = document.getElementsByClassName("merchimg");
-  images[0].src = merchdata.img[0];
-  images[1].src = merchdata.img[1];
+  images[0].src = `img/cover/${merchdata.img[0]}`;
+  images[1].src = `img/cover/${merchdata.img[1]}`;
 } else {
   merch.style.display = "none";
 }
@@ -509,7 +509,7 @@ const table       = document.querySelector('.tracklist');
 aname.innerHTML   = albums[c][1];
 artist.innerHTML  = albums[c][0];
 
-cover.src         = `${c}.png`;
+cover.src         = `img/cover/${c}.png`;
 cover.alt         = `${albums[c][1]} cover`;
 
 reltype.innerHTML = types[albums[c][2]];

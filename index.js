@@ -69,7 +69,7 @@ function addGridItem(c,n,an,y,t) {
   
   // If image does not exist, use placeholder
 
-  _g.src = `${c}.png`;
+  _g.src = `/img/cover/${c}.png`;
   _g.alt = `${n} cover`;
   i.appendChild(_g);
 

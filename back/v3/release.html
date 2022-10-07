@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../images/favicon1.png">
+    <title>HOME | MAULCAT.US</title>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/b67cdce40d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/hamburgers.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/release.css">
+  </head>
+  <body>
+    <script>
+      let pagemode = "light";
+      // Check cookies for Dark mode. If dark = true, then set it
+      if (document.cookie.includes("dark=true")) {
+        document.querySelector(':root').style.setProperty('--CL_WHITE', '#000');
+        document.querySelector(':root').style.setProperty('--CL_BLACK', '#fff');
+        document.querySelector(':root').style.setProperty('--BG_OPACITY', 1);
+        pagemode = "dark";
+      }
+    </script>
+    <div class="head">
+      <div class="big-title">
+        <h1 class="big-title">
+          MAULCAT<br>
+          RECORDS
+        </h1>
+        <h3 class="big-title">
+          EVERYTHING INTERESTING. &copy; MCRC. CO
+        </h3>
+        <div class="links">
+          <span class="mcrc">MCRC</span>
+          <a href="https://twitter.com/MaulcatRecords">
+            TWITTER</a> /
+          <a href="https://music.maulcat.us/">
+            BANDCAMP</a> /
+          <a href="https://www.discogs.com/label/2369089-Maulcat-Records">
+            DISCOGS</a> /
+          <a href="https://discord.gg/dK2wgy4NCp">
+            DISCORD</a>
+          <span class="mcrc">2021</span><br>
+          <span class="mcrc">MCRC</span>
+          <a href="artists.html">  ARTISTS</a> /
+          <a href="index.html"> RELEASES</a> /
+          <a href="videos.html">   VIDEOS</a> /
+          <a href="shop.html">     SHOP</a>
+          <span class="mcrc">2021</span>
+        </div>
+      </div>
+    </div>
+    <button id="toggle" onclick="TogglePageMode();">🌙</button>
+    <div class="lower">
+      <div class="sec1">
+        <img id="acover" src="./images/NEW_COVERS/none.jpg" />
+        <p id="description">
+  
+        </p>
+      </div>
+      <div class="sec2">
+        <h1 class="head">
+          <span id="atitle">Album Title</span> <span id="atype">Album Type</span>
+        </h1>
+        <h2 class="subhead">
+          <span id="aartist">Album Artist</span> &bull; <span id="acat"></span>
+        </h2>
+        <h3 class="list">
+          <span id="agenres">
+            <span id="gfheader">GENRE:</span> 
+          </span>
+          <br>
+          <span id="aformats">
+            <span id="gfheader">BUY NOW:</span> 
+          </span>
+          <br>
+        </h3>
+        <span>
+          Released <span id="areldate">Release Date</span>.<br>
+          &copy; <span id="aartist2"></span> & MAULCAT RECORDS
+        </span><br><br>
+        <table class="table">
+          <tr>
+            <th>#</th>
+            <th>track name</th>
+            <th>runtime</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/data.js"></script>
+    <script src="scripts/release.js"></script>
+  </body>
+</html>

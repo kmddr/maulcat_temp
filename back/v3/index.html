@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../images/favicon1.png">
+    <title>HOME | MAULCAT.US</title>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/b67cdce40d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="hstyle/amburgers.css">
+    <link rel="stylesheet" href="../fonts/stylesheet.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/releases.css">
+  </head>
+  <body>
+    <script>
+      let pagemode = "light";
+      // Check cookies for Dark mode. If dark = true, then set it
+      if (document.cookie.includes("dark=true")) {
+        document.querySelector(':root').style.setProperty('--CL_WHITE', '#000');
+        document.querySelector(':root').style.setProperty('--CL_BLACK', '#fff');
+        document.querySelector(':root').style.setProperty('--BG_OPACITY', 1);
+        pagemode = "dark";
+      }
+    </script>
+    <div class="head">
+      <div class="big-title">
+        <h1 class="big-title">
+          MAULCAT<br>
+          RECORDS
+        </h1>
+        <h3 class="big-title">
+          EVERYTHING INTERESTING. &copy; MCRC. CO
+        </h3>
+        <div class="links">
+          <span class="mcrc">MCRC</span>
+          <a href="https://twitter.com/MaulcatRecords">
+            TWITTER</a> /
+          <a href="https://music.maulcat.us/">
+            BANDCAMP</a> /
+          <a href="https://www.discogs.com/label/2369089-Maulcat-Records">
+            DISCOGS</a> /
+          <a href="https://discord.gg/dK2wgy4NCp">
+            DISCORD</a>
+          <span class="mcrc">2021</span><br>
+          <span class="mcrc">MCRC</span>
+          <a href="artists.html">  ARTISTS</a> /
+          <a href="https://music.maulcat.us/video">   VIDEOS</a> /
+          <a href="https://music.maulcat.us/merch">     SHOP</a>
+          <span class="mcrc">2021</span>
+        </div>
+      </div>
+    </div>
+    <button id="toggle" onclick="TogglePageMode();">🌙</button>
+    <div class="lower">
+      <div class="searchbar">
+        <input oninput="RunSearch()" id="searchbar" placeholder="Search.."></input>
+      </div>
+      <!-- Append releases -->
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/releases.js"></script>
+  </body>
+</html>

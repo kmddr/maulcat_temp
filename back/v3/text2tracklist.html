@@ -1,0 +1,51 @@
+<html>
+  <body>
+    <a href="index.html">BACK TO HOME</a><br>
+    <h1>Release</h1>
+    Release title:
+    <input id="albumTitle"></input><br>
+    Artist ID (0 if unknown):
+    <input id="artistID"></input><br>
+    Release type:
+    <input id="reltype"></input><br>
+    Catalog #:
+    <input id="catnum"></input><br>
+    Release date:
+    <input id="reldate" type="date"></input><br>
+    Enter genres (seperate w/ commas):
+    <input id="genres"></input><br>
+    Enter formats (seperate w/ commas):
+    <input id="formats"></input><br>
+    Enter tracklist:<br>
+    <textarea id="inputbox"></textarea><br>
+    Enter description (optional):<br>
+    <textarea id="descbox"></textarea><br><br>
+    <button onclick="update()">Convert</button>
+    <button onclick="copy()">Copy</button>
+    <br><br>
+    <pre id="codebox"></pre>
+    <script src="text2tracklist.js"></script>
+    <hr>
+    <h1>Artist</h1>
+    Artist name:
+    <input id="artistName"></input><br>
+    <button onclick="toggleAliasbox()">Aliases?</button><br>
+    <div id="aliasbox">
+      Enter aliases into textbox. Seperate with new lines and add links with ";".<br>
+      If no link, don't include semi-colons.<br>
+      Ex: vertical slopes;https://verticalslopes.bandcamp.com/<br>
+      <textarea id="aliastextbox"></textarea>
+    </div>
+    Enter genres (seperate w/ commas):
+    <input id="agenres"></input><br>
+    Enter links (seperate w/ commas):
+    <input id="links"></input><br>
+    Enter description (optional):<br>
+    <textarea id="adescbox"></textarea><br><br>
+    <button onclick="aupdate()">Convert</button>
+    <button onclick="acopy()">Copy</button>
+    <br><br>
+    <pre id="aacodebox"></pre>
+    <script src="scripts/artist2code.js"></script>
+  </body>
+</html>
