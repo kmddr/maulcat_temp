@@ -360,7 +360,34 @@ I felt inspired by concerts and how conquerable everything feels when I leave on
     ["A&R","Syd"],
     ["GFX & Color","LCL Stream"],
     ["Layout","Syd"]
-  ]]
+  ]],
+  ["super going", "a2*living", 0, 2022, [
+    ["1","ehsm","13:45"],
+    ["2","body, look into growing","00:40"],
+    ["3","inside annoying","05:46"],
+    ["4","it only gets worse","04:43"],
+    ["5","path to whatever","04:04"],
+    ["6","leap out of room & land below","14:37"],
+    ["7","staring into nothing","01:20"],
+    ["8","figured out","09:09"],
+  ], "Noise, Ambient, IDM", "Digital, CD, Cassette", true, {
+    type: "cd+cass",
+    price: "10.50 <small>each</small>",
+    desc: `Includes a high-quality CD copy of "a2*living" with black inkjet disc printing, housed in a 2-panel digipak with bright artwork on each panel.`,
+    img: ["22_1.png","22_2.png"],
+    link: "https://supergoing.bandcamp.com/album/a2-living-2"
+  }, [
+    ["Production","super going"],
+    ["Mastering","super going"],
+    ["Cover Art/Design","super going"],
+    ["A&R","Syd"],
+    ["featuring:","Reversed Reference<br>heikadog<br>chaos//barista"]
+  ], `a2*living, an album about figuring out things<br><br>track 2 has additional sound design work from reversed reference
+  track 3 has additional sound design work from heikadog
+  track 6 was co-written by heikadog and chaos//barista, and was co-produced with chaos//barista
+  track 8 was co-produced and co-written by chaos//barista`
+
+  ]
 ];
 
 const headers = {
