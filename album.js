@@ -16,11 +16,37 @@ const albums = [
     [6,"pricing","0:12"]
   ], "Ambient, Tape Loops", "Digital"],
 
-  ["Clyde is a Monster", "Love is Dead", 1, 2021],
+  ["Clyde is a Monster", "Love is Dead", 1, 2021, [
+    [1,"She Doesn't Love Me Anymore","2:43"],
+    [2,"Cold Friends","2:06"],
+    [3,"Copycat","3:25"],
+    [4,"Sleep","3:01"],
+  ], "Singer/Songwriter", "Digital"],
 
-  ["Wolf-Spawn", "Blurri / WOLF", 2, 2021],
+  ["Wolf-Spawn", "Blurri / WOLF", 2, 2021, [
+    [1,"Blurri","2:12"],
+    [2,"W.O.L.F.","2:20"]
+  ], "Rock, Experimental, Electronic", "Digital"],
 
-  ["Twilight Windows", "Nightshade", 0, 2021],
+  ["Twilight Windows", "Nightshade", 0, 2021, [
+    ["1","ナイトシェイド","09:02"],
+    ["2","花壇","08:20"],
+    ["3","目を見て","06:50"],
+    ["4","若返らせる","06:45"],
+    ["5","無限の鏡の回廊","06:12"],
+    ["6","日焼け","05:19"],
+  ], "Ambient, Deathdream", "Digital, Cassette", true, {
+    type: "cass",
+    price: "9.50",
+    desc: `Includes a high-bias neon-pink cassette copy of "nightshade" and a professionally printed J-card.`,
+    img: ["3_1.jpg", "3_2.jpg"],
+    link: "https://twilightwindows.bandcamp.com/album/nightshade-2"
+  }, [
+    ["Production","Twilight Windows<br>/ ナイトシェイド"],
+    ["Mixing/Mastering","Syd"],
+    ["A&R","Syd"],
+    ["Art","Twilight Windows<br>/ ナイトシェイド<br>Syd"]
+  ], `街が壊れている、残っているすべては、私たちがかつて持っていた夢であり、風と一緒に行き、致命的な花によって毒殺されました。これはナイトシェイドです。 The city is broken, everything that remains is a dream we once had, going with the wind and poisoned by deadly flowers. This is a night shade.<br><br>"Nightshade", a self titled release from Twilight Windows, is a full-length ambient composition built with dark, brooding atmospheres. With both unsettling and comforting chord progressions and melodies drowned in tape hiss and rain, nightshade is an exceptional ambient/vapor-adjacent album.`],
 
   ["Coniumer", "Skirtblocks", 0, 2021],
 
