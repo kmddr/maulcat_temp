@@ -544,6 +544,35 @@ for (var i = 0; i < albums[c][4].length; i++) {
   table.appendChild(tr);
 }
 
+/*
+<meta name="title"              class="m_title" content="super going — a2*living">
+    <meta property="og:title"       class="m_ogt"   content="super going — a2*living">
+    <meta property="og:type"        class="m_ogty"  content="album">
+    <meta property="og:description" class="m_d"     content="MC021, 2022 [IDM, Noise, Ambient]<br>[Digital, CD, Cassette]">
+    
+    <meta property="og:site_name"   content="Maulcat">
+
+    <meta property="og:image"       class="m_ogi"   content="https://maulcat.us/img/cover/22.png">
+    <link rel="image_src"           class="m_src"   href="https://maulcat.us/img/cover/22.png">
+    */
+
+// Embed
+let mt = document.querySelector(".m_title");
+let gt = document.querySelector(".m_ogt");
+
+mt.content = `${albums[c][0]} — ${albums[c][1]}`;
+gt.content = mt.content;
+
+let my = document.querySelector(".m_d");
+
+my.content = `MC${(c > 10) ? `0${c}` : `00${c}`}, ${albums[c][3]} [${albums[c][5]}]<br>[${albums[c][6]}]`;
+
+let oi = document.querySelector(".m_ogi");
+let oc = document.querySelector(".m_src");
+
+oi.content = `https://maulcat.us/img/cover/${c}.png`;
+oc.href = oi.content;
+
 // Get the modal
 var modal = document.querySelector(".modal");
 
