@@ -48,7 +48,31 @@ const albums = [
     ["Art","Twilight Windows<br>/ ナイトシェイド<br>Syd"]
   ], `街が壊れている、残っているすべては、私たちがかつて持っていた夢であり、風と一緒に行き、致命的な花によって毒殺されました。これはナイトシェイドです。 The city is broken, everything that remains is a dream we once had, going with the wind and poisoned by deadly flowers. This is a night shade.<br><br>"Nightshade", a self titled release from Twilight Windows, is a full-length ambient composition built with dark, brooding atmospheres. With both unsettling and comforting chord progressions and melodies drowned in tape hiss and rain, nightshade is an exceptional ambient/vapor-adjacent album.`],
 
-  ["Coniumer", "Skirtblocks", 0, 2021],
+  ["Coniumer", "Skirtblocks", 0, 2021, [
+    ["1","eeree","05:23"],
+    ["2","skirtblocks","05:24"],
+    ["3","wavvves~","03:48"],
+    ["4","mkin love","04:08"],
+    ["5","ghos","02:47"],
+    ["6","ICEDOUT","02:49"],
+    ["7","empress of light [rmx]","03:54"],
+    ["8","7thell","02:09"],
+    ["9","*k1lls u* >:3","02:11"],
+    ["10","CAT","03:17"],
+    ["11","pmmp <small>(bonus)</small>","03:41"],
+    ["12","hatch <small>(bonus)</small>","01:50"],
+  ], "Electronic, Breaks", "Digital, Cassette", true, {
+    type: "cass",
+    price: "9.50",
+    desc: `Includes a normal-bias transparent cassette copy of "skirtblocks" and a professionally printed J-card. Includes two bonus tracks.`,
+    img: ["4_1.jpg", "4_2.jpg"],
+    link: "https://coniumer.bandcamp.com/album/skirtblocks-2"
+  }, [
+    ["Production","coniumer"],
+    ["Mixing/Mastering","coniumer"],
+    ["A&R","Syd"],
+    ["Art","coniumer<br>Syd"]  
+  ], `The coniumer debut. Download includes two bonus tracks.`],
 
   ["Rybbon", "_trash", 0, 2021],
 
