@@ -457,6 +457,8 @@ const hasmerch    = albums[c][7];
 let merch         = document.querySelector('.merch');
 let merchGrid     = document.querySelector('.merch-grid');
 
+document.title    = `${albums[c][0]} - ${albums[c][1]} | Maulcat`;
+
 if (hasmerch) {
   let merchdata   = albums[c][8];
   merch.style.display = "block";
