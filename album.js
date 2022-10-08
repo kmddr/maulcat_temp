@@ -545,16 +545,16 @@ for (var i = 0; i < albums[c][4].length; i++) {
 }
 
 /*
-<meta name="title"              class="m_title" content="super going — a2*living">
-    <meta property="og:title"       class="m_ogt"   content="super going — a2*living">
-    <meta property="og:type"        class="m_ogty"  content="album">
-    <meta property="og:description" class="m_d"     content="MC021, 2022 [IDM, Noise, Ambient]<br>[Digital, CD, Cassette]">
+<meta name="title"              class="m_title" content="__TITLE__">
+    <meta property="og:title"       class="m_ogt"   content="__OGTITLE__">
+    <meta property="og:type"        content="album">
+    <meta property="og:description" class="m_d"     content="__OGDESC__">
     
     <meta property="og:site_name"   content="Maulcat">
 
-    <meta property="og:image"       class="m_ogi"   content="https://maulcat.us/img/cover/22.png">
-    <link rel="image_src"           class="m_src"   href="https://maulcat.us/img/cover/22.png">
-    */
+    <meta property="og:image"       class="m_ogi"   content="__OGI__">
+    <link rel="image_src"           class="m_src"   href="__MSRC__">
+    
 
 // Embed
 let mt = document.querySelector(".m_title");
@@ -572,6 +572,16 @@ let oc = document.querySelector(".m_src");
 
 oi.content = `https://maulcat.us/img/cover/${c}.png`;
 oc.href = oi.content;
+*/
+
+// Embed (2nd try)
+let ih = document.documentElement.innerHTML;
+document.documentElement.innerHTML = ih.replace(/__TITLE__/g, `${albums[c][0]} — ${albums[c][1]}`)
+  .replace(/__OGTITLE__/g, `${albums[c][0]} — ${albums[c][1]}`)
+  .replace(/__OGDESC__/g, `MC${(c > 10) ? `0${c}` : `00${c}`}, ${albums[c][3]} [${albums[c][5]}]<br>[${albums[c][6]}]`)
+  .replace(/__OGI__/g, `https://maulcat.us/img/cover/${c}.png`)
+  .replace(/__MSRC__/g, `https://maulcat.us/img/cover/${c}.png`);
+
 
 // Get the modal
 var modal = document.querySelector(".modal");
