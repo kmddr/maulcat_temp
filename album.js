@@ -437,7 +437,45 @@ I felt inspired by concerts and how conquerable everything feels when I leave on
   track 6 was co-written by heikadog and chaos//barista, and was co-produced with chaos//barista
   track 8 was co-produced and co-written by chaos//barista`
 
-  ]
+  ],
+  ["Clean Slate", "Connection Lost", 0, 2022, [
+    ["1","ident","0:11"],
+    ["2","stg0-","1:00"],
+    ["3","patience","1:45"],
+    ["4","it looked just like you","2:06"],
+    ["5","still searching","1:43"],
+    ["6","item shop back","0:58"],
+    ["7","(_2)","1:40"],
+    ["8","amygdala supressor","1:17"],
+    ["9","floor b1 room 103","1:41"],
+    ["10","status","0:50"],
+    ["11","runway","1:25"],
+    ["12","halogen stars","1:44"],
+    ["13","dead end","1:00"],
+    ["14","cable warmth","1:34"],
+    ["15","ending 1 (sleep)","2:52"],
+    ["16",">","0:12"],
+    ["17","choices","1:01"],
+    ["18","again","1:08"],
+    ["19","apostle","1:01"],
+    ["21","grating familiarity","1:03"],
+    ["22","puppets' seal","1:07"],
+    ["23","save room","1:28"],
+    ["24","item shop front","1:06"],
+    ["25","concrete sky","1:10"],
+    ["26","sunset in bulletproof glass","1:42"],
+    ["27","my purpose","1:31"],
+    ["28","ending 2 (freedom)","2:54"],
+    ["29",">","0:09"],
+    ["30","new body","0:32"],
+  ], "Vaporwave, Plunderphonics", "Digital, Cassette", true, {
+    type: "cass",
+    price: "10.50",
+    desc: `Black cassette copy of "Connection Lost" housed in a clear/black tint case with a professionally printed J-card with a map printout. Numbered of 25.
+    * Promotion images are product mockups and not 100% accurate to the final product. *`,
+    img: ["23_1.jpg", "23_2.jpg"],
+    link: "https://clean-slate.bandcamp.com/album/connection-lost-2"
+  }]
 ];
 
 const headers = {
@@ -469,8 +507,8 @@ if (hasmerch) {
   document.querySelector('.merchdesc').innerHTML = merchdata.desc;
 
   let images = document.getElementsByClassName("merchimg");
-  images[0].src = `img/cover/${merchdata.img[0]}`;
-  images[1].src = `img/cover/${merchdata.img[1]}`;
+  images[0].src = `img/product/${merchdata.img[0]}`;
+  images[1].src = `img/product/${merchdata.img[1]}`;
 } else {
   merch.style.display = "none";
 }
@@ -509,7 +547,7 @@ const table       = document.querySelector('.tracklist');
 aname.innerHTML   = albums[c][1];
 artist.innerHTML  = albums[c][0];
 
-cover.src         = `img/cover/${c}.png`;
+cover.src         = `img/cover_1/${c}.jpg`;
 cover.alt         = `${albums[c][1]} cover`;
 
 reltype.innerHTML = types[albums[c][2]];
@@ -592,7 +630,11 @@ var modalImg = document.querySelector(".modal-content");
 for (var k = 0; k < img.length; k++) {
   img[k].onclick = function(){
     modal.style.display = "flex";
-    modalImg.src = this.src;
+    if (this.src.includes("cover")) {
+      modalImg.src = `img/cover_0/${c}.png`;
+    } else {
+      modalImg.src = this.src;
+    }
   }
 }
 
@@ -602,6 +644,10 @@ var span = document.getElementsByClassName("close")[0];
 window.addEventListener("keyup", (e) => {
   (e.keyCode === 27) ? modal.style.display = "none" : 0;
 });
+
+modal.onclick = function() {
+  this.style.display = "none";
+}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {

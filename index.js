@@ -24,7 +24,8 @@ const albums = [
   ["Monte Hills", "Gotta Get", 2, 2022, "S 005"],
   ["Various Artists", "Maulcat Vol. 1", 3, 2022],
   ["Purity Filter", "Immortal Spirit", 0, 2022],
-  ["super going", "a2*living", 0, 2022]
+  ["super going", "a2*living", 0, 2022],
+  ["Clean Slate", "Connection Lost", 0, 2022]
 ];
 
 /* <div class="grid-unit">
@@ -69,12 +70,16 @@ function addGridItem(c,n,an,y,t) {
   
   // If image does not exist, use placeholder
 
-  _g.src = `/img/cover/${c}.png`;
+  _g.src = `/img/cover_1/${c}.jpg`;
   _g.alt = `${n} cover`;
   i.appendChild(_g);
 
   let p = document.createElement("p");
-  p.innerHTML = `${n}<br><strong>${an}</strong>`;
+  if (an.length > 15) {
+    p.innerHTML = `${n}<br><strong class="condensed">${an}</strong>`;
+  } else {
+    p.innerHTML = `${n}<br><strong>${an}</strong>`;
+  }
   i.appendChild(p);
 
   let _p = document.createElement("p");

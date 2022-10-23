@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
@@ -26,13 +28,17 @@
   </head>
   <body>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         background: black;
         color: white;
         width: 875px;
         margin: 0 auto;
         font-family: Helvetica, Arial, sans-serif;
-        
+        padding: 50px;
+        padding-top: 0px;
         letter-spacing: -0.3px;
       }
       .grid-unit {
@@ -59,9 +65,6 @@
       }
       .condensed {
         letter-spacing: -1px;
-      }
-      .doublecondensed {
-        letter-spacing: -1.9px;
       }
       .head {
         margin: 32px 0;
@@ -123,6 +126,60 @@
         bottom: 16px;
         left: 16px;
       }
+      .banner {
+        width: calc(875px - 16px);
+        text-align: center;
+        padding: 8px;
+        color: black;
+        background: white;
+        margin-top: -16px;
+        margin-bottom: 16px;
+      }
+      .banner a {
+        color: black;
+      }
+      .banner a:hover {
+        font-weight: bold;
+      }
+      hr {
+        color: white;
+        background: white;
+      }
+      ::-webkit-scrollbar {
+        width: 1.3vw;
+        padding: 8px;
+        transition: 0.3s;
+      }
+      ::-webkit-scrollbar-track {
+        background: black;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #222;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #444;
+      }
+      .marquee {
+        display: block;
+        left: 0;
+        top: 0;
+        position: absolute;
+        z-index: -5;
+      }
+      svg {
+        display: block;
+      }
+      .logo {
+        fill: #fff;
+        z-index: -5;
+      }
+      .marquee-parent {
+        z-index: -6;
+        display: block;
+        width: 100vw;
+        width: 100vh;
+        position: absolute;
+      }
     </style>
     <div class="head">
       <div class="upper">
@@ -140,14 +197,18 @@
         <hr>
       </div>
     </div>
+
+    <div class="banner">
+      Save 50% off all orders using code <strong>BCF</strong> on our <a href="music.maulcat.us">Bandcamp</a>. Sale ends 10/16.
+    </div>
+
     <div class="grid">
     </div>
-    <script src="index.js"></script>
+    <div class="shade">
+      
+    </div>
 
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    
-    <script src="server.js"></script>
+    <script src="index.js"></script>
 
   </body>
 </html>
