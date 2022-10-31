@@ -87,7 +87,7 @@ function addGridItem(c,n,an,y,t) {
     _p.innerHTML = "MCS 005<br>2022";
   } else {
     buffer = (c < 10) ? "00" : "0";
-    _p.innerHTML = `MC${buffer}${c}<br>${y}`;
+    _p.innerHTML = `MC${buffer}${(c > 18) ? c - 1 : c}<br>${y}`;
   }
   i.appendChild(_p);
 

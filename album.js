@@ -556,7 +556,7 @@ year.innerHTML    = albums[c][3];
 genres.innerHTML  = albums[c][5];
 formats.innerHTML = albums[c][6];
 
-cat.innerHTML     = (c > 10) ? `0${c}` : `00${c}`;
+cat.innerHTML     = (c > 10) ? `0${(c > 18) ? c - 1 : c}` : `00${(c > 18) ? c - 1 : c}`;
 
 if (c > 0) {
   prev.innerHTML    = albums[c-1][1];
