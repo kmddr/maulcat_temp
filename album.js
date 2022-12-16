@@ -475,7 +475,158 @@ I felt inspired by concerts and how conquerable everything feels when I leave on
     * Promotion images are product mockups and not 100% accurate to the final product. *`,
     img: ["23_1.jpg", "23_2.jpg"],
     link: "https://clean-slate.bandcamp.com/album/connection-lost-2"
-  }]
+  }],
+  /*
+  Drum Machine / All The Other MCs (Remastered & Remixed)
+by Monte Hills
+
+ Share / Embed  Wishlist
+Edit 
+Delete
+ Bulk Edit
+Fred 00:00 / 02:24
+
+Digital Album
+Streaming + Download
+Includes high-quality download in MP3, FLAC and more. Paying supporters also get unlimited streaming via the free Bandcamp app.
+Buy Digital Album  name your price
+Send as Gift 
+ 
+Digipak® CD (private) Edit
+Compact Disc (CD) + Digital Album
+Includes a high-quality CD copy of "Drum Machine / All The Other MC's" with black inkjet disc printing, housed in a 3-panel trifold digipak.
+* Promotion images are product mockups and not 100% accurate to the final product. *
+
+Includes unlimited streaming of Drum Machine / All The Other MCs (Remastered & Remixed) via the free Bandcamp app, plus high-quality download in MP3, FLAC and more.
+ships out within 7 days
+edition of 50 
+Buy Compact Disc  $12.50 USD or more 
+Send as Gift 
+1.
+Fred 02:24
+2.
+CSFCP 02:28
+3.
+Drum Machine 02:18
+4.
+Closer (Edit) 03:31
+5.
+Pie 03:01
+6.
+All The Other MCs 03:30
+7.
+By The Numbers 03:52
+8.
+Background 03:52
+9.
+Eyes 02:46
+10.
+Funky Rhythm 03:39
+11.
+CSFCP (Artemis Morte Remix) 03:55
+12.
+Eyes (CrystalForce Remix) 02:39
+13.
+Drum Machine (Ruined By Mr. Hoosteen) 04:48
+14.
+Closer (Morning End Remix) 03:02
+15.
+Pie (Corpsewax Remix) 01:17
+16.
+All The Other MCs (RADD's Static Charge Mix) 05:42
+17.
+Background (OPTML Redux) 06:37
+18.
+Funky Rhythm (STEB's Break Mix) 05:33
+about
+Art by Confetteye @ twitter.com/CONFETTEYE
+
+Remixes By:
+
+Morning End @ morningend.bandcamp.com
+
+Artemis Morte @ twitter.com/artisntdeadyet
+
+CrystalForce @ twitter.com/CrystalForce_ & crystalforce1.bandcamp.com
+
+Mr. Hoosteen @ twitter.com/mrhoosteen & mrhoosteen.bandcamp.com
+
+RADD @ twitter.com/coalpuff & coalpuff.bandcamp.com
+
+OPTML @ twitter.com/DJCockatiel
+
+STEB @ steb-music.bandcamp.com & soundcloud.com/steb-music
+credits
+released December 16, 2022
+
+Produced, mixed and mastered by Monte Hills.
+Album art by Monte Hills.
+Design and layout by Monte Hills and K.M.D.D.R. of Maulcat.
+Drawings and sketches by Confetteye.
+
+Morning End is Monte Hills and RADD.
+Atermis Morte, CrystalForce, Mr. Hoosteen, RADD, OPTML and STEB appear courtesy of OMEAC and Cockatiel Records.
+
+Recorded 2020—2022.
+Published and distributed by Maulcat f.k.a. Maulcat Records.
+Manufactured by duplication.ca / Analogue Media Technologies.
+
+Drum Machine © 2020 Monte Hills, Cockatiel Records.
+All The Other MCs © 2021 Monte Hills, Cockatiel Records.
+*/
+  ["Bagel Fanclub", "How Cars Drive", 2, 2022, [
+    ["1","i served you slop and all you gave back was firecrackers (Single Edit)","4:16"],
+    ["2","smeegle premonition (Single Edit)","2:08"],
+    ["3","saudade saw wielding (Single Edit)","3:52"]
+  ], "Flashcore, Noise, Gabber, Glitch", "Digital", false, {}],
+
+  ["Monte Hills", "Drum Machine / All The Other MCs (Remastered & Remixed)", 0, 2022, [
+    ["1","Fred","2:24"],
+    ["2","CSFCP","2:28"],
+    ["3","Drum Machine","2:18"],
+    ["4","Closer <small>(Edit)</small>","3:31"],
+    ["5","Pie","3:01"],
+    ["6","All The Other MCs","3:30"],
+    ["7","By The Numbers","3:52"],
+    ["8","Background","3:52"],
+    ["9","Eyes","2:46"],
+    ["10","Funky Rhythm","3:39"],
+    ["11","CSFCP <small>(Artemis Morte Remix)</small>","3:55"],
+    ["12","Eyes <small>(CrystalForce Remix)</small>","2:39"],
+    ["13","Drum Machine <small>(Ruined By Mr. Hoosteen)</small>","4:48"],
+    ["14","Closer <small>(Morning End Remix)</small>","3:02"],
+    ["15","Pie <small>(Corpsewax Remix)</small>","1:17"],
+    ["16","All The Other MCs <small>(RADD's Static Charge Mix)</small>","5:42"],
+    ["17","Background <small>(OPTML Redux)</small>","6:37"],
+    ["18","Funky Rhythm <small>(STEB's Break Mix)</small>","5:33"]
+  ], "House, French House", "Digital, CD", true, {
+    type: "cd",
+    price: "12.50",
+    desc: `Digipak® CD copy of "Drum Machine / All The Other MC's (Remastered & Remixed)" with black inkjet disc printing, housed in a 3-panel trifold digipak.
+    * Promotion images are product mockups and not 100% accurate to the final product. *`,
+    img: ["25_1.jpg", "25_2.jpg"],
+    link: "https://montehills.bandcamp.com/album/drum-machine-all-the-other-mcs-remastered-remixed"
+  }, [
+    ["Production","Monte Hills"],
+    ["Mastering","Monte Hills"],
+    ["Cover Art/Design","Monte Hills<br>Confetteye"],
+    ["A&R","Syd"],
+    ["Remixes By:","Morning End<br>Artemis Morte<br>CrystalForce<br>Mr. Hoosteen<br>Corpsewax<br>RADD<br>OPTML<br>STEB"],
+  ], `Produced, mixed and mastered by Monte Hills.<br>
+  Album art by Monte Hills.<br>
+  Design and layout by Monte Hills and K.M.D.D.R. of Maulcat.<br>
+  Drawings and sketches by Confetteye.<br><br>
+  
+  Morning End is Monte Hills and RADD.<br>
+  Atermis Morte, CrystalForce, Mr. Hoosteen, RADD, OPTML and STEB appear courtesy of OMEAC and Cockatiel Records.<br><br>
+  
+  Recorded 2020—2022.<br>
+  Published and distributed by Maulcat f.k.a. Maulcat Records.<br>
+  Manufactured by duplication.ca / Analogue Media Technologies.<br><br>
+  
+  Drum Machine © 2020 Monte Hills, Cockatiel Records.<br>
+  All The Other MCs © 2021 Monte Hills, Cockatiel Records.`
+  ]
 ];
 
 const headers = {
@@ -556,7 +707,15 @@ year.innerHTML    = albums[c][3];
 genres.innerHTML  = albums[c][5];
 formats.innerHTML = albums[c][6];
 
-cat.innerHTML     = (c > 10) ? `0${(c > 18) ? c - 1 : c}` : `00${(c > 18) ? c - 1 : c}`;
+if (c == 19) {
+  cat.innerHTML = ("MCS 005<br>2022");
+} if (c == 24) {
+  cat.innerHTML = ("MCS 006<br>2022");
+} else {
+  cat.innerHTML     = `MC${(c > 10) ? `0${(c > 23) ? c - 2 : (c > 18) ? c - 1 : c}` : `00${(c > 23) ? c - 2 : (c > 18) ? c - 1 : c}`}`;
+}
+
+
 
 if (c > 0) {
   prev.innerHTML    = albums[c-1][1];

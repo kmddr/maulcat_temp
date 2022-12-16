@@ -25,7 +25,9 @@ const albums = [
   ["Various Artists", "Maulcat Vol. 1", 3, 2022],
   ["Purity Filter", "Immortal Spirit", 0, 2022],
   ["super going", "a2*living", 0, 2022],
-  ["Clean Slate", "Connection Lost", 0, 2022]
+  ["Clean Slate", "Connection Lost", 0, 2022],
+  ["Bagel Fanclub", "How Cars Drive", 1, 2022, "S 006"],
+  ["Monte Hills", "Drum Machine / All The Other MCs (Remastered & Remixed)", 1, 2022]
 ];
 
 /* <div class="grid-unit">
@@ -85,6 +87,8 @@ function addGridItem(c,n,an,y,t) {
   let _p = document.createElement("p");
   if (c == 19) {
     _p.innerHTML = "MCS 005<br>2022";
+  } if (c == 24) {
+    _p.innerHTML = "MCS 006<br>2022";
   } else {
     buffer = (c < 10) ? "00" : "0";
     _p.innerHTML = `MC${buffer}${(c > 18) ? c - 1 : c}<br>${y}`;
@@ -94,6 +98,44 @@ function addGridItem(c,n,an,y,t) {
   grid.appendChild(i);
 }
 
+// Create function that does exactly what addGridItem does with JQuery
+function addGridItemJQ(c,n,an,y,t) {
+  let i = $("<div>").addClass("grid-unit");
+  let a = $("<a>").addClass("goto").attr("href",`album.html?c=${c}`);
+  let _i = $("<div>").addClass("inner");
+
+  let ig = $("<img>").attr("src","logo.png").attr("alt","Maulcat logo");
+  let sp = $("<span>").html("See more ⭢");
+
+  _i.append(ig).append(sp);
+  a.append(_i);
+  i.append(a);
+
+  let _g = $("<img>").attr("src",`/img/cover_1/${c}.jpg`).attr("alt",`${n} cover`);
+  i.append(_g);
+
+  let p = $("<p>");
+  if (an.length > 15) {
+    p.html(`${n}<br><strong class="condensed">${an}</strong>`);
+  } else {
+    p.html(`${n}<br><strong>${an}</strong>`);
+  }
+  i.append(p);
+
+  let _p = $("<p>");
+  if (c == 19) {
+    _p.html("MCS 005<br>2022");
+  } if (c == 24) {
+    _p.html("MCS 006<br>2022");
+  } else {
+    buffer = (c < 10) ? "00" : "0";
+    _p.html(`MC${buffer}${(c > 23) ? c - 2 : (c > 18) ? c - 1 : c}<br>${y}`);
+  }
+  i.append(_p);
+
+  $(".body-grid").append(i);
+}
+
 for (let i = albums.length-1; i > -1; i--) {
-  addGridItem(i,albums[i][0],albums[i][1],albums[i][3]);
+  addGridItemJQ(i,albums[i][0],albums[i][1],albums[i][3]);
 }

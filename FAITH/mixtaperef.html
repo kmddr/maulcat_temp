@@ -1,0 +1,190 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"FAITH SAMPLER"</title>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      background: black;
+      text-align: center;
+    }
+
+    .body {
+      width: 800px;
+      color: white;
+      margin: auto;
+    }
+
+    img {
+      max-width: 50%;
+      float: left;
+    }
+    .wv {
+      width: 100%;
+      max-width: 100%;
+      float: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .wvg {
+      height: 200px;
+      width: 0%;
+      float: left;
+      overflow: hidden;
+      object-fit: cover;
+      object-position: left;
+      text-align: left;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .logo {
+      height: 160px;
+      float: none;
+      margin: 0 auto;
+    }
+    .pl {
+      width: 30px;
+      float: left;
+    }
+    h1 {
+      font-family: sans-serif;
+      font-weight: 100;
+      font-size: 20px;
+    }
+    .bb {
+      max-width: 100%;
+    }
+    .waves {
+      position: relative;
+    }
+    .vol {
+      color: white;
+    }
+    .gi {
+      max-width: 50%;
+      max-height: 50%;
+    }
+    input[type=range] {
+      width: 200px;
+      accent-color: white;
+      border-radius: 0px;
+    } 
+  </style>
+ </head>
+
+ <body>
+  <div class="body">
+    <img class="logo" src="mixtape_CDT070 (2)-1.png" alt=""><br>
+    <div class="playbar">
+      <img class="pl" src="ppl.png" alt="">
+      <h1>-</h1>
+      <input type="range" min="0" max="100" value="70" class="vol" id="myRange">
+    </div>
+    <div class="waves">
+      <img src="waveforgm.png" alt="" class="wv">
+      <img class="wvg" src="waveform.png" alt="">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img class="gi" src="mixtape_front.png" alt="">
+    <img class="gi" src="mixtape_back.png" alt="">
+    <img class="bb" src="mixtape_backback.png" alt="">
+    <br>
+  </div>
+
+  <audio class="audio" src="https://cdn.discordapp.com/attachments/753515768804802590/1036519659136110602/mixtape.mp3"></audio>
+
+  <script>
+    const times = [
+      [(0*60)+0, "THE MESSAGE"],
+      [(0*60)+58, "GENESIS"],
+      [(4*60)+52, "NY EXCUSE [JUSTICE REMIX]"],
+      [(9*60)+38, "ROSS ROSS ROSS"],
+      [(13*60)+09, "LA MALA ORDINA"],
+      [(18*60)+37, "PERFECT ANGEL"],
+      [(21*60)+21, "INCONVENIENCE (LIVE EDIT)"],
+      [(24*60)+07, "BRAINWASHER - EROL ALKAN'S HORRORHOUSE DUB"],
+      [(30*60)+16, "DOE DEER"],
+      [(31*60)+51, "800DB CLOUD (BIGDOBBIE FOUR LOKO RMX)"],
+      [(33*60)+12, "ALICE PRACTICE"],
+      [(35*60)+52, "MUSICAL GENIUS"],
+      [(37*60)+45, "KEY OF C"],
+      [(41*60)+01, "SHELF"],
+      [(44*60)+00, "PUNK WEIGHT"],
+      [(47*60)+23, "HABEAS CORPSES (DRACONIAN LOVE)"],
+      [(51*60)+37, "HOPELESSFUL"],
+      [(53*60)+29, "HEIGHT"],
+      [(57*60)+52, "4UP7UP"],
+      [(60*60)+22, "DRIVE OFF A BRIDGE"],
+      [(61*60)+22, "FROM PARIS, WITH LOVE"],
+      [(64*60)+23, "LOST"],
+      [(66*60)+33, "DEAFENING RED (FEAT. SHADI)"],
+      [(71*60)+15, "WHOLE NEW WORLD/PRETEND WORLD"],
+      [(80*60)+20, "BASTARDS"],
+      [(82*60)+17, "SEVER"],
+      [(84*60)+29, "BABY I'M BLEEDING"],
+      [(87*60)+01, "UNTITLED #5"],
+      [(89*60)+13, "OFFLINE/JUDAS INSIDE"]
+    ];
+    var x = document.querySelector(".audio");
+    var y = document.querySelector(".pl");
+    var b = document.querySelector(".wv");
+    var z = document.querySelector(".wvg");
+    var a = document.querySelector("h1");
+
+    let volume = document.querySelector(".vol");
+
+    volume.addEventListener("change", function(e) {
+      x.volume = e.currentTarget.value / 100;
+    });
+
+    function update() {
+      console.log(x.currentTime / x.duration * 100 + "%");
+      z.style.width = x.currentTime / x.duration * 100 + "%";
+      // update h1 text (defined as a) to the current track name that's defined in the times array based on the current time of the audio
+      for (let i = 0; i < times.length; i++) {
+        if (x.currentTime > times[i][0]) {
+          a.innerHTML = times[i][1];
+        }
+      }
+    }
+
+    y.addEventListener("click", function () {
+      if (x.paused) {
+        x.play();
+      } else {
+        x.pause();
+      }
+    });
+
+    // add event listener to handle clicks on .wv element, seek the audio to the correct time based on the click position
+    b.addEventListener("click", function(e) {
+      console.log(e.offsetX / b.offsetWidth);
+      x.currentTime = e.offsetX / b.offsetWidth * x.duration;
+      // update the width of the .wvg element to match the new position of the audio
+      z.style.width = e.offsetX / b.offsetWidth * 100 + "%";
+    });
+
+    setInterval(update, 1000);
+    
+  </script>
+ </body>
+
+ </html>
