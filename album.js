@@ -626,7 +626,106 @@ All The Other MCs © 2021 Monte Hills, Cockatiel Records.
   
   Drum Machine © 2020 Monte Hills, Cockatiel Records.<br>
   All The Other MCs © 2021 Monte Hills, Cockatiel Records.`
-  ]
+  ],
+
+  ["bagel fanclub", "how are your cars driving?", 0, 2023, [
+    ["1","black metal on castanets (horpen)","3:08"],
+    ["2","how are your cars driving?","4:42"],
+    ["3","the song formerly known as please swallow spiders / goddamn romhacking","3:54"],
+    ["4","saudade saw wielding","5:43"],
+    ["5","sine wave assembly","2:16"],
+    ["6","warm hands, shit coffee","1:36"],
+    ["7","smeegle premonition","3:31"],
+    ["8","i served you slop and all you gave back was firecrackers","4:28"],
+    ["9","remote controlled vestigiality","1:09"],
+    ["10","thinking about segways","3:20"],
+    ["11","crunch time vs a man made of overdraft","3:02"],
+    ["12","shit hands, warm coffee","2:20"],
+    ["13","psychic gelatinous mass","9:39"],
+  ], "Flashcore, Noise, Gabber, Glitch", "Digital, CD", true, {
+    type: "cd",
+    price: "11.50",
+    desc: 'Includes a high-quality CD copy of "HOW ARE YOUR CARS DRIVING?" with black inkjet disc printing, housed in a 4-panel bifold digipak. Includes a double-sided printed Obi-Strip with art by Caybee.<br><br>Featuring art by Yam Lynn & Caybee Calabash and layout by Caybee Calabash, River Thomas & K.M.D.D.R. of Maulcat.<br><br>* Promotion images are product mockups and not 100% accurate to the final product. *',
+    img: ["26_1.jpg", "26_2.jpg"],
+    link: "https://bagelfanclub.bandcamp.com/album/how-are-your-cars-driving"
+  }, [
+    ["Production","bagel fanclub"],
+    ["Mastering","bagel fanclub"],
+    ["Cover Art/Design","bagel fanclub<br>Yam Lynn<br>Caybee Calabash"],
+    ["A&R","Syd"],
+  ], `bagel fanclub is River Thomas and Caybee Calabash.<br><br>One of the most forward thinking records of this decade! But if you need me to prove it…..
+Hi it’s me from 2030, this album, is indeed, the most forward thinking album of the rawring 20’s :3<br.<br>Travel inside the radioactive microwave of chaos and chasms of bips and bops(!!) on “how are your cars driving?” With your tour guides River and Caybee, two stoners who have no idea where they are, or what to do with their guests! [spoiler alert: they picked the highest paying job on Indeed with no prerequisites] We will be trekking deep into the Forest of Wonky Wire and jump pot holes filled with psychic gelatinous mass, but do not be afraid my friend! In this world we sine waves call home, there is no such thing as death and nothing can harm you!! Yes, our ragtag tour guides aren’t the brightest but they can surely make for an entertaining time, mind if I offer you our classic radioactive slop? All of your fears of traveling into our Marvelous Majestic Microwave Mechanism are [REDACTED]<br><br>In this one-of-a-kind album by Bagel Fanclub, be prepared for some maximalist loud portions with some quiet chiptune moments paired with melancholy and energy! Enjoy fragments of video game music you have never heard of while having chopped and screwed breaks scatter around your ears. The experience of listening to this is the closest we have to the sensation of soda and pop rocks in your ears. Within an hour you will find yourself humming along to the melodies… funny how something as noisy as this can become an ear worm, huh?<br><br>[Album write-up by Effy Adshead] `],
+
+  ["Vale-Smith", "Coruscate+ (CDs)", 0, 2023, [
+    ["1","Ceramic Skies","2:33"],
+    ["2","Know Me","3:37"],
+    ["3","Hang Tight","2:41"],
+    ["4","A Passage","2:17"],
+    ["5","Looper","2:13"],
+    ["6","Ace Ransom","3:16"],
+    ["7","Revealing Light","3:43"],
+    ["8","Give Your Best","2:33"],
+    ["9","Everything","3:24"],
+    ["10","Voracity in the Warehouse","3:37"],
+    ["11","Think Lavender","2:41"],
+    ["12","Tethered to Us","2:37"],
+    ["13","Setting Sun","4:14"],
+    ["14","Underthoughts","2:32"],
+    ["15","Hummingbird","4:13"],
+    ["","<strong>Coruscate+</strong>",""],
+    ["16","Hummingbird, pt. 2",""],
+    ["17","Sky Topiary",""],
+    ["18","Rays",""],
+    ["19","The Mowlem",""],
+    ["20","Blaze",""],
+  ], "Future Bass, House, Trap, UK Garage", "CD", true, {
+    type: "cd",
+    price: "10.50",
+    desc: `Includes a high-quality CD copy of "Coruscate" (plus 5 new bonus tracks) with black inkjet disc printing, housed in a 6-panel trifold digipak.<br><br>Featuring art/layout by Vale-Smith & K.M.D.D.R. of Maulcat.<br><br>* Promotion images are product mockups and not 100% accurate to the final product. *`,
+    link: `https://buffalostaple.bandcamp.com/album/coruscate`,
+    img: ["27_1.jpg", "27_2.jpg"]
+  }, [
+    ["Production","Vale-Smith"],
+    ["Mastering","Vale-Smith"],
+    ["Cover Art/Design","Vale-Smith<br>K.M.D.D.R."],
+    ["A&R","Syd"],
+  ], `coruscate with me.<br>Originally released January 1, 2022.`],
+
+  ["Vale-Smith", "Pristine Drifting", 2, 2023, [
+    ["1","Pristine Drifting","3:09"],
+  ], "Future Bass, House, Trap, UK Garage", "Digital", false, {}, [
+    ["Production","Vale-Smith"],
+    ["Mastering","Vale-Smith"],
+    ["Cover Art/Design","Vale-Smith"],
+    ["A&R","Syd"],
+  ]],
+
+  ["coniumer", "Acedia & Anomie", 0, 2023, [
+    ["1","altar-alter","6:06"],
+    ["2","ego irradiation","2:00"],
+    ["3","intent to","4:09"],
+    ["4","manic worship","3:23"],
+    ["5","dismiss-distaste","4:14"],
+    ["6","freewill","5:47"],
+    ["7","gift from lilith","7:14"],
+    ["8","i'llDoIt","2:13"],
+    ["9","fool's purpose","6:21"],
+  ], "Breakcore, Electronica, Hardcore Breaks, Drum & Bass", "Digital, CD, LP", true, {
+    type: "cd+lp",
+    price: "10.50/$32.00",
+    desc: `Includes a high-quality CD copy of "Acedia & Anomie" with black inkjet disc printing, housed in a 6-panel trifold digipak.<br><br>coniumer's "Acedia & Anomie" on deluxe, 12" heavyweight vinyl.<br>
+    Housed in a 3mm premium gatefold jacket.<br>
+    * Includes exclusive album art from Luna Rose.<br>
+    (c) 2023 coniumer; Maulcat. MC025-LP`,
+    link: `https://coniumer.bandcamp.com/album/acedia-anomie`,
+    img: ["28_1.jpg", "28_2.jpg"]
+  }, [
+    ["Production","Connie Rem"],
+    ["Mastering","Connie Rem<br><small>with assistance from</small> DrDuctape"],
+    ["Cover Art/Design","Luna Rose"],
+    ["A&R","Syd"],
+  ]],
+
 ];
 
 const headers = {
@@ -634,7 +733,8 @@ const headers = {
   "7in": `7" Vinyl`,
   "cass": `Cassette`,
   "cd": "CD",
-  "cd+cass": "CD & Cassette"
+  "cd+cass": "CD & Cassette",
+  "cd+lp": "CD & 12\" Vinyl",
 }
 
 const c           = parseInt(urlParams.get("c"));
@@ -650,16 +750,16 @@ document.title    = `${albums[c][0]} - ${albums[c][1]} | Maulcat`;
 
 if (hasmerch) {
   let merchdata   = albums[c][8];
-  merch.style.display = "block";
+    merch.style.display = "block";
 
-  document.querySelector('.merch-header').innerHTML = headers[merchdata.type];
-  document.querySelector('#buylink').innerHTML = `$${merchdata.price}`;
-  document.querySelector('#buylink').href = merchdata.link;
-  document.querySelector('.merchdesc').innerHTML = merchdata.desc;
+    document.querySelector('.merch-header').innerHTML = headers[merchdata.type];
+    document.querySelector('#buylink').innerHTML = `$${merchdata.price}`;
+    document.querySelector('#buylink').href = merchdata.link;
+    document.querySelector('.merchdesc').innerHTML = merchdata.desc;
 
-  let images = document.getElementsByClassName("merchimg");
-  images[0].src = `img/product/${merchdata.img[0]}`;
-  images[1].src = `img/product/${merchdata.img[1]}`;
+    let images = document.getElementsByClassName("merchimg");
+    images[0].src = `img/product/${merchdata.img[0]}`;
+    images[1].src = `img/product/${merchdata.img[1]}`;
 } else {
   merch.style.display = "none";
 }

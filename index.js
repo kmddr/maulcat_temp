@@ -2,32 +2,36 @@
 // Append albums from data (ooh boy. I've done this like 50 times before ffs)
 
 const albums = [
-  ["Vertical Slopes", "Personal Note", 0, 2021],
-  ["Clyde is a Monster", "Love is Dead", 1, 2021],
-  ["Wolf-Spawn", "Blurri / WOLF", 2, 2021],
-  ["Twilight Windows", "Nightshade", 0, 2021],
-  ["Coniumer", "Skirtblocks", 0, 2021],
-  ["Rybbon", "_trash", 0, 2021],
-  ["HUMANJACKASS", "Virtual Pleasure", 0, 2021],
-  ["RAWINTHEVOID", "MD (Manifest Destiny)", 0, 2021],
-  ["Coniumer", "Prepositional Phrasing", 1, 2021],
-  ["Sertulariae", "Luminous Viscera", 0, 2021],
-  ["CapsAdmin", "CapsAdmin", 0, 2022],
-  ["Coniumer", "Platinum / Sonic II", 2, 2022],
-  ["Twilight Windows", "Remnants", 0, 2022],
-  ["Love Crush Number One", "Requiem for an Automaton", 0, 2022],
-  ["Calcium Demo", "Metaverse", 0, 2022],
-  ["Nanoray", "Zapper", 0, 2022],
-  ["Dashie", "The Complete Dashie Dariacore Collection", 3, 2022],
-  ["Vertigoaway", "Jungle Witch / Agaki Home Radio", 3, 2022],
-  ["Vale-Smith", "Rekindle", 0, 2022],
+  ["Vertical Slopes", "Personal Note", 0, 2021, "000"],
+  ["Clyde is a Monster", "Love is Dead", 1, 2021, "001"],
+  ["Wolf-Spawn", "Blurri / WOLF", 2, 2021, "002"],
+  ["Twilight Windows", "Nightshade", 0, 2021, "003"],
+  ["Coniumer", "Skirtblocks", 0, 2021, "004"], 
+  ["Rybbon", "_trash", 0, 2021, "005"],
+  ["HUMANJACKASS", "Virtual Pleasure", 0, 2021, "006"],
+  ["RAWINTHEVOID", "MD (Manifest Destiny)", 0, 2021, "007"],
+  ["Coniumer", "Prepositional Phrasing", 1, 2021, "008"],
+  ["Sertulariae", "Luminous Viscera", 0, 2021, "009"],
+  ["CapsAdmin", "CapsAdmin", 0, 2022, "010"],
+  ["Coniumer", "Platinum / Sonic II", 2, 2022, "011"],
+  ["Twilight Windows", "Remnants", 0, 2022, "012"],
+  ["Love Crush Number One", "Requiem for an Automaton", 0, 2022, "013"],
+  ["Calcium Demo", "Metaverse", 0, 2022, "014"],
+  ["Nanoray", "Zapper", 0, 2022, "015"],
+  ["Dashie", "The Complete Dashie Dariacore Collection", 3, 2022, "016"],
+  ["Vertigoaway", "Jungle Witch / Agaki Home Radio", 3, 2022, "017"],
+  ["Vale-Smith", "Rekindle", 0, 2022, "018"],
   ["Monte Hills", "Gotta Get", 2, 2022, "S 005"],
-  ["Various Artists", "Maulcat Vol. 1", 3, 2022],
-  ["Purity Filter", "Immortal Spirit", 0, 2022],
-  ["super going", "a2*living", 0, 2022],
-  ["Clean Slate", "Connection Lost", 0, 2022],
+  ["Various Artists", "Maulcat Vol. 1", 3, 2022, "019"],
+  ["Purity Filter", "Immortal Spirit", 0, 2022, "020"],
+  ["super going", "a2*living", 0, 2022, "021"],
+  ["Clean Slate", "Connection Lost", 0, 2022, "022"],
   ["Bagel Fanclub", "How Cars Drive", 1, 2022, "S 006"],
-  ["Monte Hills", "Drum Machine / All The Other MCs (Remastered & Remixed)", 1, 2022]
+  ["Monte Hills", "Drum Machine / All The Other MCs (Remastered & Remixed)", 1, 2022, "023"],
+  ["bagel fanclub", "how are your cars driving?", 0, 2023, "024"],
+  ["Vale-Smith", "Coruscate+ (CDs)", 3, 2023, "024B CD"],
+  ["Vale-Smith", "Pristine Drifting", 2, 2023, "S 007"],
+  ["coniumer", "Acedia & Anomie", 0, 2023, "025"],
 ];
 
 /* <div class="grid-unit">
@@ -43,63 +47,8 @@ const albums = [
 </div>
 </div> */
 
-const grid = document.getElementsByClassName("grid")[1];
-
-function addGridItem(c,n,an,y,t) {
-  let i = document.createElement("div");
-  i.classList.add("grid-unit");
-
-  let a = document.createElement("a");
-  a.classList.add("goto");
-  a.href = `album.html?c=${c}`;
-
-  let _i = document.createElement("div");
-  _i.classList.add("inner");
-
-  let ig = document.createElement("img");
-  ig.src = "logo.png";
-  ig.alt = "Maulcat logo";
-  _i.appendChild(ig);
-
-  let sp = document.createElement("span");
-  sp.innerHTML = "See more ⭢";
-
-  _i.appendChild(sp);
-  a.appendChild(_i);
-  i.appendChild(a);
-
-  let _g = document.createElement("img");
-  
-  // If image does not exist, use placeholder
-
-  _g.src = `/img/cover_1/${c}.jpg`;
-  _g.alt = `${n} cover`;
-  i.appendChild(_g);
-
-  let p = document.createElement("p");
-  if (an.length > 15) {
-    p.innerHTML = `${n}<br><strong class="condensed">${an}</strong>`;
-  } else {
-    p.innerHTML = `${n}<br><strong>${an}</strong>`;
-  }
-  i.appendChild(p);
-
-  let _p = document.createElement("p");
-  if (c == 19) {
-    _p.innerHTML = "MCS 005<br>2022";
-  } if (c == 24) {
-    _p.innerHTML = "MCS 006<br>2022";
-  } else {
-    buffer = (c < 10) ? "00" : "0";
-    _p.innerHTML = `MC${buffer}${(c > 18) ? c - 1 : c}<br>${y}`;
-  }
-  i.appendChild(_p);
-
-  grid.appendChild(i);
-}
-
 // Create function that does exactly what addGridItem does with JQuery
-function addGridItemJQ(c,n,an,y,t) {
+function addGridItemJQ(c,n,an,y,t,_c) {
   let i = $("<div>").addClass("grid-unit");
   let a = $("<a>").addClass("goto").attr("href",`album.html?c=${c}`);
   let _i = $("<div>").addClass("inner");
@@ -115,27 +64,16 @@ function addGridItemJQ(c,n,an,y,t) {
   i.append(_g);
 
   let p = $("<p>");
-  if (an.length > 15) {
-    p.html(`${n}<br><strong class="condensed">${an}</strong>`);
-  } else {
-    p.html(`${n}<br><strong>${an}</strong>`);
-  }
+  p.html(`${n}<br><strong ${(an.length > 15) ? `class="condensed"` : ""}">${an}</strong>`);
   i.append(p);
 
   let _p = $("<p>");
-  if (c == 19) {
-    _p.html("MCS 005<br>2022");
-  } if (c == 24) {
-    _p.html("MCS 006<br>2022");
-  } else {
-    buffer = (c < 10) ? "00" : "0";
-    _p.html(`MC${buffer}${(c > 23) ? c - 2 : (c > 18) ? c - 1 : c}<br>${y}`);
-  }
+  _p.html(`MC${_c}<br>${y}`);
   i.append(_p);
 
   $(".body-grid").append(i);
 }
 
 for (let i = albums.length-1; i > -1; i--) {
-  addGridItemJQ(i,albums[i][0],albums[i][1],albums[i][3]);
+  addGridItemJQ(i,albums[i][0],albums[i][1],albums[i][3],null,albums[i][4]);
 }
